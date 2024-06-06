@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miro Form</title>
+</head>
+<body>
+    <form id="mktoForm_2904"></form>
+    <script src="//go2.miro.com/js/forms2/js/forms2.min.js"></script>
+    <script>
+    (function() {
+      function doOrQueueFormsStuff() {
+        if (typeof MktoForms2 !== "object") {
+          window.addEventListener("load", doOrQueueFormsStuff, true);
+        } else if (!doOrQueueFormsStuff.done) {
+          window.removeEventListener("load", doOrQueueFormsStuff, true);
+          doOrQueueFormsStuff.done = true;
+          MktoForms2.loadForm("//go2.miro.com", "228-GPV-835", 2904, function(form) {
+            MktoForms2.lightbox(form).show();
+          });
+        }
+      }
+      doOrQueueFormsStuff();
+    })();
+    </script>
+</body>
+</html>
